@@ -11,7 +11,7 @@ public class MyController {
 		public Combine show(@PathVariable int id) {
 			RestTemplate template=CombineServiceApplication.getRestTemplate();
 			Product p=template.getForObject("https://ciran12481.pythonanywhere.com/product/"+id, Product.class);
-			Customer ce=template.getForObject("https://customerservice-64wf.onrender.com/cust/"+id, Customer.class);
+			Customer ce=template.getForObject("https://customerservice-7zw8.onrender.com/"+id, Customer.class);
 			Combine c=new Combine();
 			c.setProduct(p);
 			c.setCustomer(ce);
